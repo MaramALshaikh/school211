@@ -694,6 +694,251 @@ body {
 
     </div>
   </header>
+<!-- الرؤية والرسالة والقيم -->
+<section class="school-identity" dir="rtl" lang="ar">
+
+
+<!-- الرؤية والرسالة والقيم -->
+<section class="school-identity" dir="rtl" lang="ar">
+
+  <div class="identity-grid">
+
+    <!-- الرؤية -->
+    <article class="identity-card vision-card">
+      <div class="identity-icon vision-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+
+      <h3>الرؤية</h3>
+      <p>
+        أن تكون مدرستنا بيئة تعليمية رائدة، ملهمة ومحفزة على
+        الإبداع والابتكار، قادرة على إعداد جيل متمكن من مهارات
+        القرن الحادي والعشرين، معتز بهويته، منافس محليًا.
+      </p>
+    </article>
+
+    <!-- الرسالة -->
+    <article class="identity-card mission-card">
+      <div class="identity-icon mission-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="m3 7 9 7 9-7"/>
+        </svg>
+      </div>
+
+      <h3>الرسالة</h3>
+      <p>
+        نلتزم بتوفير تعليم عالي الجودة يرتكز على القيم والمبادئ
+        الوطنية، ويعزز الإبداع والتفكير من خلال كوادر مؤهلة،
+        ومناهج متطورة، وبيئة تعليمية جاذبة، وشراكات مجتمعية
+        فاعلة، بهدف تمكين طلابنا من تحقيق أقصى إمكاناتهم
+        والمشاركة الفاعلة في بناء المجتمع.
+      </p>
+    </article>
+
+    <!-- القيم -->
+    <article class="identity-card values-card">
+      <div class="identity-icon values-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+          <path d="m12 7 1.5 3 3.3.5-2.4 2.3.6 3.2-3-1.6-3 1.6.6-3.2-2.4-2.3 3.3-.5L12 7Z"/>
+        </svg>
+      </div>
+
+      <h3>القيم</h3>
+
+      <div class="values-list">
+        <span>التميز</span>
+        <span>المسؤولية</span>
+        <span>الإبداع والابتكار</span>
+        <span>العمل بروح الفريق</span>
+        <span>الاحترام</span>
+        <span>الانتماء والولاء</span>
+        <span>الشفافية</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<style>
+.school-identity {
+  direction: rtl;
+  margin: 35px 0;
+  padding: 28px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f8f7fc, #f0fbfb);
+  font-family: "Tahoma", "Arial", sans-serif;
+  color: #003944;
+}
+
+.identity-heading {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.identity-label {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 20px;
+  background: #e9e2f7;
+  color: #7030A0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.identity-heading h2 {
+  color: #382972;
+  font-size: clamp(22px, 3vw, 30px);
+  margin: 14px 0 8px;
+}
+
+.identity-heading p {
+  color: #557078;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.identity-card {
+  position: relative;
+  background: #ffffff;
+  padding: 24px 21px;
+  border-radius: 17px;
+  border: 1px solid #e8e7f0;
+  border-top: 4px solid #7030A0;
+  box-shadow: 0 5px 18px rgba(56, 41, 114, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.identity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(56, 41, 114, 0.12);
+}
+
+.mission-card {
+  border-top-color: #208CAA;
+}
+
+.values-card {
+  border-top-color: #0DCFDA;
+}
+
+/* تنسيق الأيقونات */
+.identity-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  margin-bottom: 14px;
+}
+
+.identity-icon svg {
+  width: 29px;
+  height: 29px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vision-icon {
+  background: #f0eafa;
+  color: #7030A0;
+}
+
+.mission-icon {
+  background: #e7f6fa;
+  color: #208CAA;
+}
+
+.values-icon {
+  background: #e4fbf8;
+  color: #008b8c;
+}
+
+.identity-card h3 {
+  font-size: 20px;
+  color: #382972;
+  margin: 0 0 14px;
+}
+
+.mission-card h3 {
+  color: #208CAA;
+}
+
+.values-card h3 {
+  color: #008b8c;
+}
+
+.identity-card p {
+  font-size: 14px;
+  line-height: 2.05;
+  color: #435a64;
+  margin: 0;
+  text-align: justify;
+}
+
+.values-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.values-list span {
+  display: inline-block;
+  padding: 9px 12px;
+  border-radius: 9px;
+  background: #f1eef9;
+  color: #382972;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.values-list span:nth-child(even) {
+  background: #e8f7fa;
+  color: #126b82;
+}
+
+@media (max-width: 900px) {
+  .identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .identity-card {
+    padding: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-identity {
+    padding: 17px;
+    margin: 22px 0;
+  }
+
+  .identity-heading h2 {
+    font-size: 22px;
+  }
+
+  .identity-card p {
+    font-size: 13px;
+  }
+}
+</style>
 
   <!-- ===== مؤشرات المدرسة ===== -->
   <section class="section">
