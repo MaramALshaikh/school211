@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النمو المهني | الابتدائية 211</title>
+
+<style>
+:root {
+  --purple: #382972;
+  --purple2: #7030A0;
+  --teal: #208CAA;
+  --dark-teal: #003944;
+  --blue: #2BADDF;
+  --mint: #0DCFDA;
+  --lavender: #7358A5;
+  --bg: #f5f6fb;
+  --white: #fff;
+  --text: #292640;
+  --muted: #77758b;
+  --border: #e9e7f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  direction: rtl;
+}
+
+.page {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* الترويسة */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+  border-radius: 24px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(125deg, var(--purple), var(--purple2), var(--teal));
+  box-shadow: 0 10px 28px rgba(56, 41, 114, .13);
+}
+
+.hero-header {
+  position: relative;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ministry-logo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 88px;
+  height: 88px;
+  padding: 7px;
+  object-fit: contain;
+  background: white;
+  border-radius: 15px;
+}
+
+.hero-content {
+  width: 100%;
+  padding: 0 105px;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #d9ffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.6;
+}
+
+.hero-description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.92);
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.hero-meta span {
+  padding: 8px 13px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 10px;
+  background: rgba(255,255,255,.12);
+  font-size: 13px;
+}
+
+/* مقدمة الصفحة */
+.intro {
+  margin-bottom: 25px;
+  padding: 20px 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-right: 5px solid var(--teal);
+  border-radius: 15px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.intro strong {
+  color: var(--purple);
+}
+
+/* عناوين المستويات */
+.level {
+  margin-bottom: 27px;
+}
+
+.level-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  color: var(--purple);
+  font-size: 21px;
+}
+
+.level-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  color: var(--purple2);
+  background: #eee8fa;
+}
+
+.level-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+/* بطاقات الروابط */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  min-height: 112px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: 0 4px 15px rgba(41,38,64,.035);
+  transition: transform .2s ease, box-shadow .2s ease,
+              border-color .2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  border-color: #c9b6e7;
+  box-shadow: 0 8px 22px rgba(56,41,114,.09);
+}
+
+.link-icon {
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple2);
+  background: #eee8fa;
+  border-radius: 15px;
+}
+
+.link-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.team .link-icon {
+  color: #087e83;
+  background: #e2f7f6;
+}
+
+.institution .link-icon {
+  color: #1687b2;
+  background: #e5f5fc;
+}
+
+.link-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.link-title {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--purple);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.link-description {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.link-arrow {
+  flex-shrink: 0;
+  color: #aaa4be;
+  font-size: 23px;
+}
+
+/* زر العودة */
+.back-row {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 10px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s ease;
+}
+
+.back-button:hover {
+  background: var(--purple2);
+}
+
+.footer {
+  margin-top: 25px;
+  padding: 18px 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.footer strong {
+  color: var(--purple);
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 13px;
+  }
+
+  .hero {
+    padding: 20px 15px;
+    border-radius: 19px;
+  }
+
+  .hero-header {
+    padding-top: 75px;
+  }
+
+  .ministry-logo {
+    width: 65px;
+    height: 65px;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .link-card {
+    min-height: 95px;
+    padding: 15px;
+  }
+
+  .level-heading {
+    font-size: 19px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- الترويسة -->
+  <header class="hero">
+    <div class="hero-header">
+
+      <img
+        class="ministry-logo"
+        src="images/ministry-logo.png"
+        alt="شعار وزارة التعليم السعودية"
+      >
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          الابتدائية الحادية عشرة بعد المئتين (211)
+        </div>
+
+        <h1>بوابة النمو المهني</h1>
+
+        <p class="hero-description">
+          مسارات التطوير المهني على المستوى الفردي والفريقي والمؤسسي
+        </p>
+
+        <div class="hero-meta">
+          <span>مديرة المدرسة: ابتسام باقلب</span>
+          <span>إعداد: مرام الشيخ</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- مقدمة -->
+  <div class="intro">
+    <strong>النمو المهني:</strong>
+    الوصول إلى ملفات التطوير المهني ومجتمعات التعلم والبرامج التدريبية
+    والدروس التطبيقية من خلال بوابة واحدة.
+  </div>
+
+  <!-- المستوى الفردي -->
+  <section class="level">
+    <h2 class="level-heading">
+      <span class="level-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+        </svg>
+      </span>
+      النمو المهني على المستوى الفردي
+    </h2>
+
+    <div class="links-grid">
+      <a class="link-card"
+         href="https://ryhg-my.sharepoint.com/:f:/g/personal/t9706828_rg_moe_gov_sa/IgDHTXli5KjuTpxAcyRtA_OSAWDYM1NgVRSsUzwFGz0oV0Y?e=X99Uhc"
+         target="_blank" rel="noopener noreferrer">
+
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+            <path d="m16 11 2 2 4-4"/>
+          </svg>
+        </span>
+
+        <span class="link-text">
+          <span class="link-title">النمو المهني على المستوى الفردي</span>
+          <span class="link-description">
+            ملف التطوير المهني والإنجازات الفردية
+          </span>
+        </span>
+
+        <span class="link-arrow">‹</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- مستوى الفريق -->
+  <section class="level team">
+    <h2 class="level-heading">
+      <span class="level-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="10" cy="7" r="4"/>
+          <path d="M20 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </span>
+      النمو المهني على مستوى الفريق
+    </h2>
+
+    <div class="links-grid">
+      <a class="link-card"
+         href="https://ryhg-my.sharepoint.com/:f:/g/personal/t9706828_rg_moe_gov_sa/IgCvPXKdrhE8R4hWiMJL0BbaAb9TgbxrBcwLHYpu3ZdKnes?e=cXngIP"
+         target="_blank" rel="noopener noreferrer">
+
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="10" cy="7" r="4"/>
+            <path d="M16 3.5a4 4 0 0 1 0 7.5"/>
+            <path d="M18 14h4M20 12v4"/>
+          </svg>
+        </span>
+
+        <span class="link-text">
+          <span class="link-title">مجتمعات التعلم المهني</span>
+          <span class="link-description">
+            التعاون وتبادل الخبرات والممارسات التعليمية
+          </span>
+        </span>
+
+        <span class="link-arrow">‹</span>
+      </a>
+
+      <a class="link-card"
+         href="https://ryhg-my.sharepoint.com/:f:/g/personal/t9706828_rg_moe_gov_sa/IgAqjcXRSo1bRqxOHRag1OgGAUTM_uLO95WhtE43hCjsWZQ?e=sr7B12"
+         target="_blank" rel="noopener noreferrer">
+
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18"/>
+            <path d="M5 21V7l8-4v18"/>
+            <path d="M19 21V11l-6-4"/>
+            <path d="M8 9v.01M8 12v.01M8 15v.01M8 18v.01"/>
+            <path d="M16 13v.01M16 16v.01M16 19v.01"/>
+          </svg>
+        </span>
+
+        <span class="link-text">
+          <span class="link-title">تبادل الزيارات</span>
+          <span class="link-description">
+            الزيارات الصفية وتبادل الممارسات والخبرات
+          </span>
+        </span>
+
+        <span class="link-arrow">‹</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- المستوى المؤسسي -->
+  <section class="level institution">
+    <h2 class="level-heading">
+      <span class="level-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21h18M5 21V7l7-4 7 4v14"/>
+          <path d="M9 21v-5h6v5M9 10h.01M15 10h.01M9 13h.01M15 13h.01"/>
+        </svg>
+      </span>
+      النمو المهني على المستوى المؤسسي
+    </h2>
+
+    <div class="links-grid">
+      <a class="link-card"
+         href="https://ryhg-my.sharepoint.com/:f:/g/personal/t9706828_rg_moe_gov_sa/IgBfZvRDn1tVQpb1EJF7Jka9AfhHAg7bpuMtutKpDYRDzj8?e=mYQ5a8"
+         target="_blank" rel="noopener noreferrer">
+
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M7 8h10M7 12h6M7 16h4"/>
+            <circle cx="18" cy="16" r="2"/>
+          </svg>
+        </span>
+
+        <span class="link-text">
+          <span class="link-title">البرامج التدريبية والورش</span>
+          <span class="link-description">
+            البرامج التدريبية وورش التطوير المهني
+          </span>
+        </span>
+
+        <span class="link-arrow">‹</span>
+      </a>
+
+      <a class="link-card"
+         href="https://ryhg-my.sharepoint.com/:f:/g/personal/t9706828_rg_moe_gov_sa/IgD5llzpsCVrT51LNcIKRqj6ARa-8Hdh-mkahji_WwNJuxE?e=oDoy83"
+         target="_blank" rel="noopener noreferrer">
+
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 10 12 5l10 5-10 5-10-5Z"/>
+            <path d="M6 12v5c4 3 8 3 12 0v-5"/>
+            <path d="M22 10v6"/>
+          </svg>
+        </span>
+
+        <span class="link-text">
+          <span class="link-title">الدروس التطبيقية</span>
+          <span class="link-description">
+            عرض الممارسات التعليمية والدروس التطبيقية
+          </span>
+        </span>
+
+        <span class="link-arrow">‹</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- العودة إلى الصفحة الرئيسية -->
+  <div class="back-row">
+    <a class="back-button" href="index.html">
+      <span>›</span>
+      العودة إلى البوابة الرئيسية
+    </a>
+  </div>
+
+  <footer class="footer">
+    <strong>الابتدائية الحادية عشرة بعد المئتين (211)</strong>
+    <br>
+    مديرة المدرسة: ابتسام باقلب | إعداد: مرام الشيخ
+  </footer>
+
+</div>
+</body>
+</html>
